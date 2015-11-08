@@ -4,24 +4,25 @@ class KingofThieves
 {
 public static void Main ()
 {	
-	int s = int.Parse (Console.ReadLine ());
-	char t = char.Parse(Console.ReadLine ());
-	char c = '-';
+int s = int.Parse (Console.ReadLine ());
+char t = char.Parse(Console.ReadLine ());
+char c = '-';
 
-	for (int n = 0, i = 0; n < (s + 1) /2; n++, i+=2)
+for (int n = 0, i = 0; n < (s + 1) /2; n++, i+=2)
+{
+if (n < s / 2) 
 	{
-		if (n < s / 2) {
-			Console.WriteLine ("{0}{1}{0}", new string (c, ((s - 1) / 2) - n), new string (t, i + 1));
-		} else {
-			Console.WriteLine ("{0}", new string (t, s));
-		}
+	Console.WriteLine ("{0}{1}{0}", new string (c, ((s - 1) / 2) - n), new string (t, i + 1));
 	}
+else {
+	Console.WriteLine ("{0}", new string (t, s));
+}
+}
 
-	for (int n = 0, i = (s - 2); i >= 0; n++, i-=2)
-	{
+for (int n = 0, i = (s - 2); i >= 0; n++, i-=2)
+{
 
-	Console.WriteLine ("{0}{1}{0}", new string (c, n+1), new string (t, i));
-	}
-			}
-		}
-	
+Console.WriteLine ("{0}{1}{0}", new string (c, n+1), new string (t, i));
+}
+}
+}
