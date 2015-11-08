@@ -14,10 +14,11 @@ if (n < s / 2)
 	{
 	Console.WriteLine ("{0}{1}{0}", new string (c, ((s - 1) / 2) - n), new string (t, i + 1));
 	}
-else {
+else 
+	{
 	Console.WriteLine ("{0}", new string (t, s));
-}
-}
+	}
+	}
 
 for (int n = 0, i = (s - 2); i >= 0; n++, i-=2)
 {
